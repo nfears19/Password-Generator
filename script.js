@@ -48,10 +48,10 @@ function generatePassword() {
   
     // if/else statement for creating a password with uppercase letters
     if (passwordCapital === true){
-      for (i = 0; i < passwordLength; i++){ //Making it the right length
-        var ranCap = Math.floor(Math.random() * capitalChar.length);  //this randomizes the characters
-        newCapChar.push(capitalChar[ranCap]); //Inserting the random characters into the empty array
-        passResult.push(newCapChar); //Inserting the random characters into the final password result
+      for (i = 0; i < passwordLength; i++){ 
+        var ranCap = Math.floor(Math.random() * capitalChar.length); 
+        newCapChar.push(capitalChar[ranCap]); 
+        passResult.push(newCapChar); 
       }
     }
   
@@ -82,10 +82,10 @@ function generatePassword() {
       }
     }
   
-    for (i = 0; i < passwordLength; i++){ //This makes the password the right length
-      var ranPass = Math.floor(Math.random() * passResult.length); //Randomizing...
-      var ranIndex = Math.floor(Math.random() * passwordLength); //Randomizing...
-      newPassResult.push(passResult[ranPass][ranIndex]); //Creating the password result with all the chosen characters
+    for (i = 0; i < passwordLength; i++){ 
+      var ranPass = Math.floor(Math.random() * passResult.length); 
+      var ranIndex = Math.floor(Math.random() * passwordLength);
+      newPassResult.push(passResult[ranPass][ranIndex]); 
     }
   
     return newPassResult.join("");
